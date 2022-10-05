@@ -11,8 +11,8 @@ spec:
     path: charts/argocd-for-dev
     helm:
       valueFiles:
-        - values.yaml
         - values-dev.yaml
+        - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: javaclub
