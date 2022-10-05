@@ -6,15 +6,15 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/lvivJavaClub/argocd-for-dev-deploy.git
-    targetRevision: HEAD
+    repoURL: 'https://github.com/lvivJavaClub/argocd-for-dev-deploy.git'
     path: charts/argocd-for-dev
+    targetRevision: HEAD
     helm:
       valueFiles:
         - values.yaml
         - values-dev.yaml
   destination:
-    server: https://kubernetes.default.svc
+    server: 'https://kubernetes.default.svc'
     namespace: javaclub
   syncPolicy:
     automated:
