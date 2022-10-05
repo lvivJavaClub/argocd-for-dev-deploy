@@ -1,0 +1,6 @@
+service:
+  name: demo-service
+
+  image:
+    repository: quay.io/java_shevtsov/argocd-for-dev
+    tag: c2f9e95

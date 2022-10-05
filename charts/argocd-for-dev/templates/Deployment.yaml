@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{- .Values.service.name }}
+  annotations:
+    app.kubernetes.io/name: {{- .Values.service.name }}
+
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{- .Values.service.name }}
+  template:
+    metadata:
+      name:  {{- .Values.service.name }}
+      labels:
+        app.kubernetes.io/name: {{- .Values.service.name }}
+    spec:
+      containers:
+        - name: {{- .Values.service.image.repository }}
+        - image: {{- .Values.service.image.tag }}
