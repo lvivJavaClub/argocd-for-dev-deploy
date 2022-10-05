@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-for-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/lvivJavaClub/argocd-for-dev-deploy.git
+    targetRevision: HEAD
+    path: charts/argocd-for-dev
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: javaclub
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false
