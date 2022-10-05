@@ -16,6 +16,7 @@ spec:
       labels:
         app.kubernetes.io/name: {{ .Release.Name }}
         customlabel: success
+        {{- toYaml .Values.service.customLabels | nindent 8 }}
     spec:
       containers:
         - name: {{ .Release.Name }}
