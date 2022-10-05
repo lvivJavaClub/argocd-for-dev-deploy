@@ -1,0 +1,3 @@
+service:
+  customLabels:
+    label2: dev-two
