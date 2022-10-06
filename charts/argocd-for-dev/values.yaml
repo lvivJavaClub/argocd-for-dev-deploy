@@ -3,7 +3,7 @@ service:
 
   image:
     repository: 'quay.io/java_shevtsov/argocd-for-dev'
-    tag: '0.18.0'
+    tag: '0.19.0'
 
   customLabels:
     label1: one
