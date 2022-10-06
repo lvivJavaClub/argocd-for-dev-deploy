@@ -2,4 +2,3 @@ service:
   customLabels:
     label2: dev-two
     label3: three
-    label4: four
